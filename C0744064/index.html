@@ -43,6 +43,12 @@
             output = output + "</table>";
             document.write(output);
         }
+        function MouseRollover(MyImage){
+            MyImage.src="pic1.jpg"
+        }
+        function MouseOut(MyImage){
+            MyImage.src = "pic2.png"
+        }
     </script>
 </head>
 <body>
@@ -51,6 +57,9 @@
         document.write(numbers(input));
 
     </script>-->
+    <div align="center">
+        <img src="pic1.jpg"  width="650px" height="550px"  onmouseover="MouseRollover(this)" onmouseout="MouseOut(this)"/>
+    </div>
     
 </body>
 </html>
