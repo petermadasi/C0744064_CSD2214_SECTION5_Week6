@@ -4,30 +4,53 @@
     <meta charset="utf-8" />
     <title>C0744064</title>
     <link href="css/default.css" rel="stylesheet" />
-    <script>
-        function numbers(CountUpTo) {
-            var sum = 0;
-            var i = 0;
-            while (i <= CountUpTo) {
-                sum += i;
-                i++;
-                return sum;
-                document.write(sum);
-            }
-            //for (i = 0; i < CountUpTo ; i++) {
-            //sum += i;
+    <script type="text/javascript">
+        //function numbers(CountUpTo) {
+        //    var sum = 0;
+        //    var i = 0;
+        //    while (i <= CountUpTo) {
+        //        sum += i;
+        //        i++;
+        //        return sum;
+        //        document.write(sum);
+        //    }
+        //    //for (i = 0; i < CountUpTo ; i++) {
+        //    //sum += i;
             
-            //}
-            //return sum;
+        //    //}
+        //    //return sum;
+        //}
+        var rows = prompt("how may rows for your multiplication table?");
+        var cols = prompt("how may columns for your multiplication table?");
+        if (rows == "" || rows == null)
+            rows = 10;
+        if (cols == "" || cols == null)
+            cols = 10;
+        createTable(rows, cols);
+        function createTable(rows, cols) {
+            var j = 1;
+            var output = "<table border='1' width='500' cellspacing='0' cellpadding='5'>";
+            for (i = 1; i <= rows; i++) {
+                output = output + "<tr>";
+
+                while (j <= cols) {
+                output = output + "<td>" + i * j + "</td>";
+                j = j + 1;
+                }
+                output = output + "</tr>";
+                j = 1;
+            }
+            output = output + "</table>";
+            document.write(output);
         }
     </script>
 </head>
 <body>
-    <script>
+    <!--<script>
         var input = prompt("Input yout number");
         document.write(numbers(input));
 
-    </script>
+    </script>-->
     
 </body>
 </html>
