@@ -80,6 +80,7 @@
     <Content Include="css\default.css" />
     <Content Include="pic1.JPG" />
     <Content Include="pic2.PNG" />
+    <Content Include="Validation.html" />
     <None Include="C0744064_TemporaryKey.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
