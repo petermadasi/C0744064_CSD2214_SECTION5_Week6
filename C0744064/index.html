@@ -20,6 +20,7 @@
         //    //}
         //    //return sum;
         //}
+        function Mul() {
         var rows = prompt("how may rows for your multiplication table?");
         var cols = prompt("how may columns for your multiplication table?");
         if (rows == "" || rows == null)
@@ -42,6 +43,7 @@
             }
             output = output + "</table>";
             document.write(output);
+            }
         }
         function MouseRollover(MyImage){
             MyImage.src="pic1.jpg"
@@ -49,9 +51,25 @@
         function MouseOut(MyImage){
             MyImage.src = "pic2.png"
         }
+        function trigger() {
+            document.getElementById("hover").addEventListener("mouseover", popup);
+            function popup() {
+                alert("welcome to y webpage!!!");
+            }
+        }
     </script>
+
+    <style>
+        p{
+            font-size:50px;
+            position:fixed;
+            left:550px;
+            top:300px;
+        }
+    </style>
+
 </head>
-<body>
+<body onload="trigger();">
     <!--<script>
         var input = prompt("Input yout number");
         document.write(numbers(input));
@@ -60,6 +78,7 @@
     <div align="center">
         <img src="pic1.jpg"  width="650px" height="550px"  onmouseover="MouseRollover(this)" onmouseout="MouseOut(this)"/>
     </div>
-    
+
+    <p id="hover">welcome!!!</p>
 </body>
 </html>
