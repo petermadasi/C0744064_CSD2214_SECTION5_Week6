@@ -27,7 +27,7 @@
             errors[5] = "<span style='color:red'>please enter your confirm password!</span>";
             for (i in inputs) {
                 var errMessage = errors[i];
-                var div = div[i];
+                var div = divs[i];
                 if (inputs[i] == "")
                     document.getElementById(div).innerHTML = errMessage;
                 else if (i == 2) {
@@ -83,7 +83,7 @@
         </tr>
         <tr>
             <td>User ID:</td>
-            <td><input type="text" id="UID" onkeyup="validate();"/></td>
+            <td><input type="text" id="uid" onkeyup="validate();"/></td>
             <td><div id="errUid"></div></td>
         </tr>
         <tr>
@@ -98,7 +98,7 @@
         </tr>
         <tr>
 
-            <td><input type="button" id="create" value="Create" onclick="validate(); finalValidate();"</td>
+            <td><input type="button" id="create" value="Create" onclick="validate(); finalValidate();"/></td>
             <td><div id="errFinal"></div></td>
         </tr>
 
